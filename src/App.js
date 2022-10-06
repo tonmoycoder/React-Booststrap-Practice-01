@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import { Button, Spinner } from 'react-bootstrap';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button variant='danger'>My Button</Button>
+      <Spinner animation='grow' variant='warning'></Spinner>
+      <Button variant="warning" >
+        <Spinner
+          as="span"
+          animation="grow"
+          size="sm"
+          role="status"
+          aria-hidden="true"
+          variant='info'
+        />
+        Loading...
+      </Button>
     </div>
   );
 }
